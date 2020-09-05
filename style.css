@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Sen, sans-serif;
+    letter-spacing: 2px;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 480px;
+    height: 630px;
+    background-color: rgba(22, 103, 136, 0.43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 30px 8px rgba(0, 0, 0, .4);
+}
+
+/*Form*/
+form {
+    /*5 % lef and right*/
+    width: 90%;
+}
+
+.form-group {
+    height: 65px;
+}
+
+label {
+    position: relative;
+    bottom: 3px;
+}
+
+input {
+    width: 100%;
+    height: 34px;
+    padding: 5px;
+    border: .15em solid black;
+    border-radius: 5px;
+    outline: none;
+    /*ignore the padding spacing and it's not going allow the width to be more than 100% */
+    box-sizing: border-box;
+    /*all of our changes(valid,invalid) will transition in .3s*/
+    transition: all .3s;
+}
+
+input:valid {
+    border: .15em solid #31b531;
+}
+
+input:invalid {
+    border: .15em solid #db6d6d;
+}
+
+input:active {
+    background-color: white;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-family: Sen, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+button:hover {
+    filter: brightness(200%);
+    background-color: rgb(11, 11, 11);
+}
+
+button:focus {
+    outline: none;
+}
+
+.message-container {
+    border: .15em solid black;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
